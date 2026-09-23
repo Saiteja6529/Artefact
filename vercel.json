@@ -1,0 +1,16 @@
+{
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/build",
+  "rewrites": [
+    { "source": "/chat", "destination": "/api/index" },
+    { "source": "/chat/(.*)", "destination": "/api/index" },
+    { "source": "/synthesize", "destination": "/api/index" },
+    { "source": "/health", "destination": "/api/index" }
+  ],
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}

@@ -1,6 +1,5 @@
-chromadb
-sentence-transformers
+deepgram-sdk
+flask
+flask-cors
 groq
 python-dotenv
-pydantic
-flask
